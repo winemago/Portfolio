@@ -5,6 +5,8 @@
     --color4: #9dbeb9;
 }
 
+
+
 body{
     font-family: 'Poppins', sans-serif;
     height: 100vh;
@@ -197,26 +199,27 @@ section{
 ////////////////SKILSS////////////////
 
 .skills{
-    background-color: var(--color3);
     padding: 2em;
     padding-bottom: 4em;
-    .skills-containers{
-        display: -ms-flexbox; /* IE 10 */
+    .title-skills{
+        margin-bottom: 100px;
+    }
+    ul{
         display: grid;
-        -ms-flex-wrap: wrap; /* IE 10 */
-        flex-wrap: wrap;
-        padding: 0 4px;
-
+        grid-template-columns: repeat(3, 200fr);
+        grid-template-rows: repeat(4, 25%);
+        grid-gap: 15px;
+    
+    
         .column {
-            -ms-flex: 20%; /* IE 10 */
-            flex: 20%;
-            padding: 0 4px;
+            float:left;
+            width: 100%;
         }
-
-        .column img {
-            margin-top: 8px;
-            vertical-align: middle;
-        }
+        .skills-containers:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
     }
 }
 .title-s{
@@ -242,6 +245,49 @@ section{
         padding-bottom: 1em;
     }
 }
+
+////////////////CONTACT/////////////////////
+.contact{
+    background-color: #194350;
+    .subtitle-c{
+        color: #ff8882;
+        border-bottom: 1px solid;
+        margin: 60px;
+    }
+    form{
+    display: flex;
+    flex-direction: column;
+    
+    input,.msg{
+        
+        border-radius: .5rem;
+        margin: 1rem;
+        padding: 5px;
+        color: #194350;
+    }
+    label{
+        color: #ffc2b4;
+        font-weight: bold;
+        display: block;
+        font-size: 1.3em;
+        padding-top: .5em;
+    }
+    .button-send{
+        background-color: #ffc2b4;
+        color: #194350;
+        font-weight: bold;
+        margin-inline: 15vh;
+        cursor: pointer;
+        outline: none;
+    }
+    .button-send:hover{
+        background-color: #ff8882;
+        color: #194350;
+    }
+
+}
+}
+
 
 
 
