@@ -295,6 +295,7 @@ section{
         margin-inline: 15vh;
         cursor: pointer;
         outline: none;
+        font-size: 1rem;
     }
     .button-send:hover{
         background-color: #ff8882;
@@ -334,7 +335,7 @@ section{
     }
 
     .nav-ul.show{     
-        display: flex;
+        display: block;
 
     }
 
@@ -414,9 +415,22 @@ section{
     .featured{
         justify-content: center;
     }
+    .featured::before{
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: #ffc2b4;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: .6;
+    }
+
 
     .portfolio{
-        justify-content: center;
+        
         .portfolio-container{
             margin-inline: 10%;
             
@@ -424,6 +438,9 @@ section{
         .portfolio-left{
             width: 100%;
             margin-left: 10rem;
+        }
+        .portfolio-container img{
+            margin-left: 40%;
         }
     }
 
@@ -440,7 +457,6 @@ section{
             width: 100%;
             margin-top: 15%;
             margin-left: -10%;
-        }
-        
+        }  
     }
 }

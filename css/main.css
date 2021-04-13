@@ -409,6 +409,7 @@ section .fetured-desc {
   margin-inline: 15vh;
   cursor: pointer;
   outline: none;
+  font-size: 1rem;
 }
 
 .contact form .button-send:hover {
@@ -438,9 +439,7 @@ section .fetured-desc {
             flex-flow: column wrap;
   }
   .nav-ul.show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
   }
 }
 
@@ -522,10 +521,17 @@ section .fetured-desc {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .portfolio {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .featured::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #ffc2b4;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .6;
   }
   .portfolio .portfolio-container {
     margin-inline: 10%;
@@ -533,6 +539,9 @@ section .fetured-desc {
   .portfolio .portfolio-left {
     width: 100%;
     margin-left: 10rem;
+  }
+  .portfolio .portfolio-container img {
+    margin-left: 40%;
   }
   .contact {
     display: -ms-grid;
