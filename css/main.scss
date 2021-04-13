@@ -5,7 +5,9 @@
     --color4: #9dbeb9;
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Poppins', sans-serif;
@@ -179,7 +181,7 @@ section{
 .featured{
     position: relative;
     img{
-        max-width: 500px;
+        max-width: 600px;
         border-radius: 1.2rem;
     }
 }
@@ -248,7 +250,21 @@ section{
 
 ////////////////CONTACT/////////////////////
 .contact{
+    position: relative;
     background-color: #194350;
+        .contact-container::before{
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #ffc2b4;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        opacity: .4;
+    }
+
     .subtitle-c{
         color: #ff8882;
         border-bottom: 1px solid;
@@ -262,7 +278,7 @@ section{
         
         border-radius: .5rem;
         margin: 1rem;
-        padding: 5px;
+        padding: 1em 2em 1em 2em;
         color: #194350;
     }
     label{
@@ -285,7 +301,11 @@ section{
         color: #194350;
     }
 
-}
+
+} 
+   #svg-contact{
+        display: none;
+    }
 }
 
 
@@ -318,4 +338,109 @@ section{
 
     }
 
+}
+
+@media screen and (min-width: 800px){
+    .featured,.portfolio{
+        text-align: left;
+    }
+    .featured,.portfolio-container{
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+    .left, .portfolio-left{
+        display: grid;
+        place-content: center;
+    }
+    .right{
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+    .skills{
+        padding-inline: 8em;
+    }
+    .portfolio{
+        padding-top: 7em;
+    }
+    .portfolio-container img{
+        margin-left: 30%;
+    }
+
+    .portfolio-left{
+        margin-left: 2em;
+    }
+}
+
+@media screen and (min-width: 1070px){
+    .about{
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 66% auto;
+        padding: 0;
+        .content{
+            padding: 10em 8em 6em 4em;
+            text-align: left;
+
+            h1{
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+            h3{
+                font-size: 2em;
+                line-height: 1.2em;
+            }
+            .pres{
+                width: 80%;
+            }
+            .meet{
+                text-align: center;
+               position: absolute; 
+               top: 80%;
+               left: 50%;
+            }
+            #svg-image-about{
+                display: unset;
+                position: relative; 
+                margin-left: 90%;
+                margin-top: -22%;
+                width: 100%;
+            }
+        }
+    }
+    section{
+        padding: 4em;
+    }
+
+    .featured{
+        justify-content: center;
+    }
+
+    .portfolio{
+        justify-content: center;
+        .portfolio-container{
+            margin-inline: 10%;
+            
+        }
+        .portfolio-left{
+            width: 100%;
+            margin-left: 10rem;
+        }
+    }
+
+
+    .contact{
+        display: grid;
+        grid-template-columns: 66% auto;
+        padding: 0;
+        form{
+            padding: 2em 25em 6em 4em;
+        }
+        #svg-contact{
+            display: unset;
+            width: 100%;
+            margin-top: 15%;
+            margin-left: -10%;
+        }
+        
+    }
 }

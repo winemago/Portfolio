@@ -5,6 +5,10 @@
   --color4: #9dbeb9;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
@@ -281,7 +285,7 @@ section .fetured-desc {
 }
 
 .featured img {
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 1.2rem;
 }
 
@@ -350,7 +354,21 @@ section .fetured-desc {
 }
 
 .contact {
+  position: relative;
   background-color: #194350;
+}
+
+.contact .contact-container::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ffc2b4;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  opacity: .4;
 }
 
 .contact .subtitle-c {
@@ -372,7 +390,7 @@ section .fetured-desc {
 .contact form input, .contact form .msg {
   border-radius: .5rem;
   margin: 1rem;
-  padding: 5px;
+  padding: 1em 2em 1em 2em;
   color: #194350;
 }
 
@@ -398,6 +416,10 @@ section .fetured-desc {
   color: #194350;
 }
 
+.contact #svg-contact {
+  display: none;
+}
+
 @media screen and (max-width: 1070px) {
   header .hamb-container {
     display: -webkit-box;
@@ -419,6 +441,114 @@ section .fetured-desc {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .featured, .portfolio {
+    text-align: left;
+  }
+  .featured, .portfolio-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% auto;
+        grid-template-columns: 40% auto;
+  }
+  .left, .portfolio-left {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .right {
+    margin-left: 2em;
+    margin-top: 1em;
+  }
+  .skills {
+    padding-inline: 8em;
+  }
+  .portfolio {
+    padding-top: 7em;
+  }
+  .portfolio-container img {
+    margin-left: 30%;
+  }
+  .portfolio-left {
+    margin-left: 2em;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .about {
+    height: 90vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66% auto;
+        grid-template-columns: 66% auto;
+    padding: 0;
+  }
+  .about .content {
+    padding: 10em 8em 6em 4em;
+    text-align: left;
+  }
+  .about .content h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  .about .content h3 {
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+  .about .content .pres {
+    width: 80%;
+  }
+  .about .content .meet {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+  }
+  .about .content #svg-image-about {
+    display: unset;
+    position: relative;
+    margin-left: 90%;
+    margin-top: -22%;
+    width: 100%;
+  }
+  section {
+    padding: 4em;
+  }
+  .featured {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio .portfolio-container {
+    margin-inline: 10%;
+  }
+  .portfolio .portfolio-left {
+    width: 100%;
+    margin-left: 10rem;
+  }
+  .contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 66% auto;
+        grid-template-columns: 66% auto;
+    padding: 0;
+  }
+  .contact form {
+    padding: 2em 25em 6em 4em;
+  }
+  .contact #svg-contact {
+    display: unset;
+    width: 100%;
+    margin-top: 15%;
+    margin-left: -10%;
   }
 }
 /*# sourceMappingURL=main.css.map */
