@@ -37,6 +37,8 @@ a {
 
 header {
   background-color: #194350;
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #194350), to(#145064));
+  background: linear-gradient(to right, #194350 80%, #145064);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,6 +122,8 @@ header nav ul img {
 
 .about {
   background-color: #194350;
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #194350), to(#145064));
+  background: linear-gradient(to right, #194350 80%, #145064);
   color: #ffc2b4;
   display: -ms-grid;
   display: grid;
@@ -129,6 +133,32 @@ header nav ul img {
 
 .about h1 {
   font-weight: bold;
+}
+
+.about .meet .bi-chevron-down {
+  animation: chevdown 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes chevdown {
+  from {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes chevdown {
+  from {
+    -webkit-transform: translateY(45px);
+            transform: translateY(45px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 .about .blob1 {
@@ -304,10 +334,24 @@ section .fetured-desc {
 .skills {
   padding: 2em;
   padding-bottom: 4em;
+  position: relative;
 }
 
 .skills .title-skills {
   margin-bottom: 100px;
+}
+
+.skills .skills-containers::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  border-radius: 1rem;
+  background-color: #ffc2b4;
+  top: 0%;
+  left: 15%;
+  z-index: -1;
+  opacity: .5;
 }
 
 .skills ul {
@@ -323,12 +367,6 @@ section .fetured-desc {
 .skills ul .column {
   float: left;
   width: 100%;
-}
-
-.skills ul .skills-containers:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 .title-s {
@@ -351,6 +389,10 @@ section .fetured-desc {
   margin-bottom: 2em;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+.portfolio .portfolio-container .portfolio-left .inner img {
+  width: 50px;
 }
 
 .contact {
@@ -468,11 +510,12 @@ section .fetured-desc {
   .portfolio {
     padding-top: 7em;
   }
-  .portfolio-container img {
-    margin-left: 30%;
+  .portfolio .portfolio-container .portfolio-left {
+    margin-left: .6em;
   }
-  .portfolio-left {
-    margin-left: 2em;
+  .portfolio-container img {
+    margin-left: 15%;
+    margin-top: 2em;
   }
 }
 
@@ -534,11 +577,14 @@ section .fetured-desc {
     opacity: .6;
   }
   .portfolio .portfolio-container {
-    margin-inline: 10%;
+    margin-inline: 5%;
+  }
+  .portfolio .portfolio-container .portfolio-left {
+    margin-left: 5.5em;
   }
   .portfolio .portfolio-left {
     width: 100%;
-    margin-left: 10rem;
+    margin-left: 1rem;
   }
   .portfolio .portfolio-container img {
     margin-left: 40%;

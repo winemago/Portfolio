@@ -43,7 +43,8 @@ a{
 
 
 header{
-    background-color: #194350;
+    background-color: #194350;  
+    background: linear-gradient(to right, #194350 80%, #145064);
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
@@ -113,12 +114,26 @@ header{
 }
 .about{
     background-color: #194350;
+    background: linear-gradient(to right, #194350 80%, #145064);
     color:#ffc2b4;
     display: grid;
     text-align: center;
     padding:4em;
     h1{
         font-weight: bold;
+    }
+
+    .meet{
+        .bi-chevron-down{
+            animation: chevdown 1s infinite alternate-reverse;
+        }
+        @keyframes chevdown {
+            from{
+                transform:  translateY(45px);
+            }to{
+                transform: translateY(0px);
+            }
+        }
     }
 
     .blob1 {
@@ -203,8 +218,21 @@ section{
 .skills{
     padding: 2em;
     padding-bottom: 4em;
+    position: relative;
     .title-skills{
         margin-bottom: 100px;
+    }        
+    .skills-containers::before{
+       content: "";
+       position: absolute;
+       width: 70%;
+       height: 70%;
+       border-radius: 1rem;
+       background-color: #ffc2b4;
+       top: 0%;
+       left: 15%;
+       z-index: -1;
+       opacity: .5;
     }
     ul{
         display: grid;
@@ -217,12 +245,7 @@ section{
             float:left;
             width: 100%;
         }
-        .skills-containers:after {
-            content: "";
-            display: table;
-            clear: both;
-          }
-    }
+    }  
 }
 .title-s{
     font-weight: bold;
@@ -245,6 +268,13 @@ section{
         margin-bottom: 2em;
         padding-top: 1em;
         padding-bottom: 1em;
+        .portfolio-left{
+            .inner{
+                img{
+                    width: 50px;
+                }
+            }
+        }
     }
 }
 
@@ -362,14 +392,18 @@ section{
     }
     .portfolio{
         padding-top: 7em;
+    
+    .portfolio-container{
+        .portfolio-left{
+             margin-left: .6em;
+        }
+    }
     }
     .portfolio-container img{
-        margin-left: 30%;
+        margin-left: 15%;
+        margin-top: 2em;
     }
 
-    .portfolio-left{
-        margin-left: 2em;
-    }
 }
 
 @media screen and (min-width: 1070px){
@@ -432,12 +466,16 @@ section{
     .portfolio{
         
         .portfolio-container{
-            margin-inline: 10%;
+            margin-inline: 5%;
+            .portfolio-left{
+                 margin-left: 5.5em;
+            }
+        
+        }    
             
-        }
         .portfolio-left{
             width: 100%;
-            margin-left: 10rem;
+            margin-left: 1rem;
         }
         .portfolio-container img{
             margin-left: 40%;
