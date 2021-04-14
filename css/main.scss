@@ -196,7 +196,7 @@ section{
 .featured{
     position: relative;
     img{
-        max-width: 600px;
+        max-width: 400px;
         border-radius: 1.2rem;
     }
 }
@@ -225,12 +225,12 @@ section{
     .skills-containers::before{
        content: "";
        position: absolute;
-       width: 70%;
-       height: 70%;
+       width: 85%;
+       height: 88%;
        border-radius: 1rem;
        background-color: #ffc2b4;
        top: 0%;
-       left: 15%;
+       left: 8%;
        z-index: -1;
        opacity: .5;
     }
@@ -259,7 +259,7 @@ section{
     background-color: var(--color1);
 
     img{
-        max-width: 450px;
+        max-width: 400px;
         border-radius: 1rem;
     }
     .portfolio-container{

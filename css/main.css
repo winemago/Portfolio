@@ -315,7 +315,7 @@ section .fetured-desc {
 }
 
 .featured img {
-  max-width: 600px;
+  max-width: 400px;
   border-radius: 1.2rem;
 }
 
@@ -344,12 +344,12 @@ section .fetured-desc {
 .skills .skills-containers::before {
   content: "";
   position: absolute;
-  width: 70%;
-  height: 70%;
+  width: 85%;
+  height: 88%;
   border-radius: 1rem;
   background-color: #ffc2b4;
   top: 0%;
-  left: 15%;
+  left: 8%;
   z-index: -1;
   opacity: .5;
 }
@@ -379,7 +379,7 @@ section .fetured-desc {
 }
 
 .portfolio img {
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 1rem;
 }
 
