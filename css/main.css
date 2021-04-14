@@ -587,7 +587,7 @@ section .fetured-desc {
     margin-left: 1rem;
   }
   .portfolio .portfolio-container img {
-    margin-left: 40%;
+    margin-left: 22%;
   }
   .contact {
     display: -ms-grid;
@@ -604,6 +604,24 @@ section .fetured-desc {
     width: 100%;
     margin-top: 15%;
     margin-left: -10%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio .portfolio-container img {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .portfolio .portfolio-container img {
+    margin-left: 40%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .portfolio .portfolio-container img {
+    margin-left: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */

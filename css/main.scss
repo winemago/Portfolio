@@ -478,7 +478,7 @@ section{
             margin-left: 1rem;
         }
         .portfolio-container img{
-            margin-left: 40%;
+            margin-left: 22%;
         }
     }
 
@@ -496,5 +496,27 @@ section{
             margin-top: 15%;
             margin-left: -10%;
         }  
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .portfolio{
+        .portfolio-container img{
+            margin-left: 30%;
+        }
+    }
+}
+@media screen and (min-width: 1250px){
+    .portfolio{
+        .portfolio-container img{
+            margin-left: 40%;
+        }
+    }
+}
+@media screen and (min-width: 1300px){
+    .portfolio{
+        .portfolio-container img{
+            margin-left: 50%;
+        }
     }
 }
