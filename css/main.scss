@@ -483,12 +483,11 @@ section{
             
         .portfolio-left{
             width: 100%;
-            margin-left: 1rem;
+            padding-left: -5rem;
         }
         .portfolio-container img{
-            
-                max-width: 500px;
-            margin-left: 22%;
+            max-width: 400px;
+            margin-left: 20%;
         }
     }
 
@@ -519,14 +518,23 @@ section{
 @media screen and (min-width: 1250px){
     .portfolio{
         .portfolio-container img{
-            margin-left: 40%;
+            max-width: 400px;
+            margin-left: 30%;
         }
     }
 }
 @media screen and (min-width: 1300px){
     .portfolio{
         .portfolio-container img{
-            margin-left: 50%;
+            margin-left: 35%;
+        }
+    }
+}
+@media screen and (min-width: 1400px){
+    .portfolio{
+        .portfolio-container img{
+            max-width: 400px;
+            margin-left: 45%;
         }
     }
 }
