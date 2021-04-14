@@ -196,7 +196,7 @@ section{
 .featured{
     position: relative;
     img{
-        max-width: 400px;
+        max-width: 350px;
         border-radius: 1.2rem;
     }
 }
@@ -259,7 +259,7 @@ section{
     background-color: var(--color1);
 
     img{
-        max-width: 400px;
+        max-width: 320px;
         border-radius: 1rem;
     }
     .portfolio-container{
@@ -387,6 +387,9 @@ section{
         margin-left: 2em;
         margin-top: 1em;
     }
+    .featured img{
+        max-width: 500px;
+    }
     .skills{
         padding-inline: 8em;
     }
@@ -400,6 +403,7 @@ section{
     }
     }
     .portfolio-container img{
+        max-width: 420px;
         margin-left: 15%;
         margin-top: 2em;
     }
@@ -448,7 +452,11 @@ section{
 
     .featured{
         justify-content: center;
+        img{
+            max-width: 500px;
+        }
     }
+
     .featured::before{
         content: "";
         position: absolute;
@@ -478,6 +486,8 @@ section{
             margin-left: 1rem;
         }
         .portfolio-container img{
+            
+                max-width: 500px;
             margin-left: 22%;
         }
     }

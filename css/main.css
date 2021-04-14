@@ -315,7 +315,7 @@ section .fetured-desc {
 }
 
 .featured img {
-  max-width: 400px;
+  max-width: 350px;
   border-radius: 1.2rem;
 }
 
@@ -379,7 +379,7 @@ section .fetured-desc {
 }
 
 .portfolio img {
-  max-width: 400px;
+  max-width: 320px;
   border-radius: 1rem;
 }
 
@@ -504,6 +504,9 @@ section .fetured-desc {
     margin-left: 2em;
     margin-top: 1em;
   }
+  .featured img {
+    max-width: 500px;
+  }
   .skills {
     padding-inline: 8em;
   }
@@ -514,6 +517,7 @@ section .fetured-desc {
     margin-left: .6em;
   }
   .portfolio-container img {
+    max-width: 420px;
     margin-left: 15%;
     margin-top: 2em;
   }
@@ -564,6 +568,9 @@ section .fetured-desc {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .featured img {
+    max-width: 500px;
+  }
   .featured::before {
     content: "";
     position: absolute;
@@ -587,6 +594,7 @@ section .fetured-desc {
     margin-left: 1rem;
   }
   .portfolio .portfolio-container img {
+    max-width: 500px;
     margin-left: 22%;
   }
   .contact {
