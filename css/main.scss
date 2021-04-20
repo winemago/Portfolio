@@ -34,78 +34,48 @@ a{
 }
 
 
-.nav-container{
-    
-    a{
-        color:#9dbeb9;
-    }
-}   
-
-
-header{
-    background-color: #194350;  
+nav {  
+    position: absolute;
+    float: right;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 10vh;
     background: linear-gradient(to right, #194350 80%, #145064);
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem;
-    align-items: center;
-
 
     .logo{
-        color: #ff8882;
+        position: absolute;
+        color: var(--color2);
         font-weight: bold;
-        font-size: 1.2rem;
-        margin-left: 10px;
+        font-size: 1.5rem;
+        margin-top: .4em;
+        margin-left: .8em;
     }
-
-    .hamb-container{
-        
-        display: flex;
-        position: relative;
-        z-index: 2;
-        flex-direction: column;
-        cursor: pointer;
-        display: none;
-        
-        span {
-            color:  var(--color2);
-            $width:25px;
-            $height:3px;
-            width:$width;
-            height:$height;
-            background:white;
-            margin: 3px;
-            border-radius: 25%;
-        }
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    #resume{
+        background: var(--color3);
+        color: var(--color1);
+        border-radius: 1.2rem;
+        padding: .65em;
     }
-
-    nav{
-        float: right;
-        
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            a{
-                display: block;
-                padding: 0 1em;
-            }
-            #resume{
-                border: 1px solid var(--color3);
-                border-radius: 1rem;
-                background-color: var(--color3);
-                color: #194350;
-                padding: 7px;
-                padding-inline: 15px;
-                margin-inline: 2rem;
-            }
-            img{
-                width: 45px;
-                display: block;
-            }
-        }
+    img{
+        width: 50px;
     }
-}
+  }
+  .nav-links li a {
+    color: var(--color3);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+ 
 
 /////////////////ABOUT///////////////
 
@@ -142,27 +112,27 @@ header{
         left: 0;
         width: 50vmax;
         
-        animation: move 20s ease-in-out infinite;
+        animation: move 2s ease-in-out infinite;
         transform-origin: 50% 50%;
       }
       
       .blob2 {
         position: absolute;
         top: 0;
-        left: 1;
+        left: 0;
         width: 50vmax;
         z-index: -1;
-        animation: move1 20s ease-in-out infinite;
+        animation: move 20s ease-in-out infinite;
         transform-origin: 10% 90%;
       }
       
       @keyframes move {
-        0%   { transform: scale(1)   translate(-30px, 10px); }
-        38%  { transform: scale(0.8, 1) translate(30vw, 80vh) rotate(360deg); }
+        0%   { transform: scale(1)   translateY(-30%, 10px); }
+        38%  { transform: scale(0.8, 1) translateY(30vw, 80vh) rotate(360deg); }
         40%  { transform: scale(0.8, 1) translate(30vw, 80vh) rotate(360deg); }
-        78%  { transform: scale(1.3) translate(50vw, 0vh) rotate(20deg); }
-        80%  { transform: scale(1.3) translate(50vw, 0vh) rotate(20deg); }
-        100% { transform: scale(1)   translate(-30px, 10px); }
+        78%  { transform: scale(1.3) translateX(50vw, 110vh) rotate(20deg); }
+        80%  { transform: scale(1.3) translateX(50vw, 110vh) rotate(20deg); }
+        100% { transform: scale(1)   translateX(-30px, 10px); }
       }
       @keyframes move1{
         100%{ transform: scale(1)   translate(-30%, 10%); }
@@ -347,29 +317,81 @@ section{
 
 ////////////////MEDIA//////////////
 
-@media screen and (max-width: 1070px){
-    
-    header{
-        .hamb-container{
-            display:flex; 
-        }
-}
-    nav{
-        display: none;
-        position:fixed;
-        background-color:#ff8882;
-        height: 100vh;
-        width: 100%;
-        flex-flow: column wrap;
-       
+@media screen and (max-width: 1068px) {
+    .line {
+      width: 30px;
+      height: 3px;
+      background:var(--color3);
+      margin: 5px;
+      border-radius: 1rem;
     }
-
-    .nav-ul.show{     
-        display: block;
-
+    nav {
+      position: relative;
+      height: 7vh;
     }
-
-}
+  
+    .hamburger {
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 70%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+  
+    .nav-links {
+      position: absolute;
+      background: linear-gradient(to right, #194350 80%, #145064);
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(50px at 90% -10%);
+      -webkit-clip-path: circle(50px at 90% -10%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+      img{
+          width: 70px;
+      }
+    }
+    .nav-links.open {
+      clip-path: circle(2000px at 100%);
+      -webkit-clip-path: circle(2000px at 100%);
+      pointer-events: all;
+    }
+    .nav-links li {
+      opacity: 0;
+    }
+    .nav-links li a {
+      font-size: 1.2rem;
+    }
+    .nav-links li:nth-child(1) {
+      transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+      transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+      transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5) {
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6) {
+        transition: all 0.5s ease 0.9s;
+    }
+    .nav-links li:nth-child(7) {
+        transition: all 0.5s ease 1s;
+    }
+    .nav-links li:nth-child(8) {
+        transition: all 0.5s ease 1.2s;
+    } 
+    li.fade {
+      opacity: 1;
+    }
+  }
 
 @media screen and (min-width: 800px){
     .featured,.portfolio{
@@ -412,7 +434,7 @@ section{
 
 @media screen and (min-width: 1070px){
     .about{
-        height: 90vh;
+        height: 100vh;
         display: grid;
         grid-template-columns: 66% auto;
         padding: 0;
