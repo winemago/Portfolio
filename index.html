@@ -52,7 +52,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#portfolio">My work</a></li>
             <li><a href="#contact">Contact me</a></li>
-            <li><a id="resume" href="/doc/CVPieroDondero.pdf" download="">Resume</a></li>
+            <li><a id="resume" href="/doc/Resume_Piero_Dondero.pdf" download="">Resume</a></li>
             <li><a href="https://www.linkedin.com/in/piero-dondero-77625b158/"><img  src="/images/logos/linkedin.svg" alt=""></a></li>
             <li> <a href="https://github.com/winemago"><img src="/images/logos/github.svg" alt=""></a></li>
         </ul>
@@ -237,13 +237,13 @@
         <div class="contact-container">
             <h2 class="subtitle-c">Let's work together</h2>
             <form id="contact-form">
-                <input type="hidden" name="contact_number">
+                <input type="hidden" name="contact_number" required>
                 <label>Name</label>
-                <input class="name" type="text" name="user_name">
+                <input class="name" type="text" name="user_name" required>
                 <label>Email</label>
-                <input class="email" type="email" name="user_email">
+                <input class="email" type="email" name="user_email" required>
                 <label>Message</label>
-                <textarea class="msg" name="message"></textarea>
+                <textarea class="msg" name="message" required></textarea>
                 <input class="button-send" type="submit" value="Send">
             </form>
         </div>

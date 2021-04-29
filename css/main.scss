@@ -229,7 +229,7 @@ section{
     background-color: var(--color1);
 
     img{
-        max-width: 320px;
+        max-width: 290px;
         border-radius: 1rem;
     }
     .portfolio-container{
@@ -292,7 +292,8 @@ section{
         background-color: #ffc2b4;
         color: #194350;
         font-weight: bold;
-        margin-inline: 15vh;
+        margin-inline: auto;
+        width: 160px;
         cursor: pointer;
         outline: none;
         font-size: 1rem;
@@ -306,6 +307,7 @@ section{
 } 
    #svg-contact{
         display: none;
+        z-index: 3;
     }
 }
 
@@ -441,7 +443,7 @@ section{
         .content{
             padding: 10em 8em 6em 4em;
             text-align: left;
-
+            padding-inline: 6em;
             h1{
                 font-size: 3em;
                 line-height: 1.2em;
@@ -462,8 +464,8 @@ section{
             #svg-image-about{
                 display: unset;
                 position: relative; 
-                margin-left: 90%;
-                margin-top: -22%;
+                margin-left: 78%;
+                margin-top: -40%;
                 width: 100%;
             }
         }
@@ -519,7 +521,8 @@ section{
         grid-template-columns: 66% auto;
         padding: 0;
         form{
-            padding: 2em 25em 6em 4em;
+            width: 500px;
+            margin: auto;
         }
         #svg-contact{
             display: unset;
@@ -558,5 +561,10 @@ section{
             max-width: 400px;
             margin-left: 45%;
         }
+    }
+    .about .content #svg-image-about {
+        margin-left: 72%;
+        margin-top: -31%;
+        max-width: 1000px;
     }
 }

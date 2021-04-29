@@ -346,7 +346,7 @@ section .fetured-desc {
 }
 
 .portfolio img {
-  max-width: 320px;
+  max-width: 290px;
   border-radius: 1rem;
 }
 
@@ -415,7 +415,8 @@ section .fetured-desc {
   background-color: #ffc2b4;
   color: #194350;
   font-weight: bold;
-  margin-inline: 15vh;
+  margin-inline: auto;
+  width: 160px;
   cursor: pointer;
   outline: none;
   font-size: 1rem;
@@ -428,6 +429,7 @@ section .fetured-desc {
 
 .contact #svg-contact {
   display: none;
+  z-index: 3;
 }
 
 @media screen and (max-width: 1068px) {
@@ -568,6 +570,7 @@ section .fetured-desc {
   .about .content {
     padding: 10em 8em 6em 4em;
     text-align: left;
+    padding-inline: 6em;
   }
   .about .content h1 {
     font-size: 3em;
@@ -589,8 +592,8 @@ section .fetured-desc {
   .about .content #svg-image-about {
     display: unset;
     position: relative;
-    margin-left: 90%;
-    margin-top: -22%;
+    margin-left: 78%;
+    margin-top: -40%;
     width: 100%;
   }
   section {
@@ -638,7 +641,8 @@ section .fetured-desc {
     padding: 0;
   }
   .contact form {
-    padding: 2em 25em 6em 4em;
+    width: 500px;
+    margin: auto;
   }
   .contact #svg-contact {
     display: unset;
@@ -671,6 +675,11 @@ section .fetured-desc {
   .portfolio .portfolio-container img {
     max-width: 400px;
     margin-left: 45%;
+  }
+  .about .content #svg-image-about {
+    margin-left: 72%;
+    margin-top: -31%;
+    max-width: 1000px;
   }
 }
 /*# sourceMappingURL=main.css.map */
