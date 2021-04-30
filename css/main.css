@@ -96,10 +96,15 @@ nav .logo {
   display: grid;
   text-align: center;
   padding: 4em;
+  height: -webkit-fill-available;
 }
 
 .about h1 {
   font-weight: bold;
+}
+
+.about .meet {
+  margin-top: 6em;
 }
 
 .about .meet .bi-chevron-down {
@@ -282,7 +287,7 @@ section .fetured-desc {
 }
 
 .featured img {
-  max-width: 350px;
+  max-width: 300px;
   border-radius: 1.2rem;
 }
 

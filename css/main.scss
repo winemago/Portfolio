@@ -89,11 +89,13 @@ nav {
     display: grid;
     text-align: center;
     padding:4em;
+    height: -webkit-fill-available;
     h1{
         font-weight: bold;
     }
 
     .meet{
+        margin-top: 6em;
         .bi-chevron-down{
             animation: chevdown 1s infinite alternate-reverse;
         }
@@ -166,7 +168,7 @@ section{
 .featured{
     position: relative;
     img{
-        max-width: 350px;
+        max-width: 300px;
         border-radius: 1.2rem;
     }
 }
