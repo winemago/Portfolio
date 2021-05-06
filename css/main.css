@@ -146,7 +146,7 @@ nav .logo {
 
 .about .blob2 {
   position: absolute;
-  top: 0;
+  top: 80vh;
   left: 0;
   width: 50vmax;
   z-index: -1;
@@ -683,7 +683,7 @@ section .fetured-desc {
   }
   .about .content #svg-image-about {
     margin-left: 72%;
-    margin-top: -31%;
+    margin-top: -28%;
     max-width: 1000px;
   }
 }
