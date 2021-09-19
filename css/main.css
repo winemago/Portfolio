@@ -33,7 +33,6 @@ a {
 
 nav {
   position: absolute;
-  float: right;
   top: 0;
   z-index: 2;
   width: 100%;
@@ -56,7 +55,7 @@ nav .logo {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  width: 50%;
+  width: 60%;
   height: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -317,7 +316,7 @@ section .fetured-desc {
   content: "";
   position: absolute;
   width: 85%;
-  height: 88%;
+  height: 90%;
   border-radius: 1rem;
   background-color: #ffc2b4;
   top: 0%;
@@ -331,8 +330,8 @@ section .fetured-desc {
   display: grid;
   -ms-grid-columns: (200fr)[3];
       grid-template-columns: repeat(3, 200fr);
-  -ms-grid-rows: (25%)[4];
-      grid-template-rows: repeat(4, 25%);
+  -ms-grid-rows: (20%)[5];
+      grid-template-rows: repeat(5, 20%);
   grid-gap: 15px;
 }
 
